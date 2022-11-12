@@ -1,6 +1,6 @@
 # indiegogo-analytics
 
-Used to collect analytics for crowdfunding campaigns using the IndieGOGO API.
+Used to collect analytics for crowdfunding campaigns.
 
 This application based on spark-basic-structure. 
 
