@@ -1,0 +1,22 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<h1>$msg.get("DATA_FULL_HEADING")</h1>
+    #if($donation)
+        #foreach($donation in $donations)
+        <p>Amount: $donation.getAmount </p>
+        <p>Count: $donation.getCount </p>
+        #end
+    #else
+        <p>[Result will be here]</p>
+    #end
+    #if($perk)
+        #foreach($perk in $perks)
+        #foreach($donation in $donations)
+         <p> Perk label:         $donation.getLabel() </p>
+         <p> Perk description:   $donation.getDescription </p>
+         <p> Perk id:            $donation.getId </p>
+         <p> Count:              $donation.getCount </p>
+    #else
+        <p>[Result will be here]</p>
+    #end
+#end
